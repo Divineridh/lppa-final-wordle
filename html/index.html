@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <script src="../scripts/index.js"></script>
+    <title>Wordle Final LPPA</title>
+</head>
+<body>
+    <header>
+
+    </header>
+    <div class="main-container flex-container">
+        <div class="game-title">
+            Wordle Final
+        </div>
+        <div class="new-game button-container">
+            <span class="button" id="new-game-button">Nuevo juego</span>
+        </div>
+        <div class="load-game button-container">
+            <span class="button" id="load-game-button">Cargar juego</span>
+        </div>
+        <div class="contact button-container">
+            <span class="button" id="contact-button">Contacto</span>
+        </div>
+    </div>
+    <section class="modal">
+        <div class="modal-div modal-newgame flex-container">
+            <span>Ingresa el nombre con el cual se guardará la partida</span>
+            <input class="input-text" type="text" id="game-name" placeholder=" ">
+            <label class="input-label-error hidden">Debe ingresar un nombre de partida</label>
+            <span class="modal-ok" id="new-game-begin-button">Comenzar</span>
+        </div>
+    </section>
+    <section class="modal">
+        <div class="modal-div modal-loadgame flex-container">
+            
+        </div>
+    </section>
+    <section class="modal">
+        <div class="modal-div modal-contact">
+            <fieldset class="form-group flex-container">
+                <label class="form-label-text" for="textNombre">Nombre</label>
+                <input class="form-text" type="text" id="textNombre" placeholder=" ">
+                <label class="form-label-error hidden" for="textNombre">Debe ingresar un nombre</label>
+                <label class="form-label-text" for="textEmail">Email</label>
+                <input class="form-text" type="text" id="textEmail" placeholder=" ">
+                <label class="form-label-error hidden" for="textEmail">Email no valido</label>
+                <label class="form-label-text" for="textMensaje">Mensaje</label>
+                <input class="form-text" type="text" id="textMensaje" placeholder=" ">
+                <label class="form-label-error hidden" for="textMensaje">Debe ingresar un mensaje</label>
+            </fieldset>
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+</body>
+</html>
