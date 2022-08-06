@@ -29,12 +29,16 @@ body {
 	color: #4a90be;
 }
 
+.buttons-container {
+	margin-top: 100px;
+}
+
 .button-container {
 	background-color: #113150;
 	border: 1px solid black;
 	border-radius: 8px;
 	padding: 0 20px;
-	margin-top: 130px;
+	margin-top: 60px;
 	height: 70px;
 	width: 240px;
 	line-height: 3.4;
