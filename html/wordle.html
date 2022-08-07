@@ -7,13 +7,16 @@
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/reset.css">
     <link rel="stylesheet" href="../styles/wordle.css">
-    <script src="../scripts/wordle.js" defer></script>
+    <script src="../scripts/wordle.js" type="module" defer></script>
     <title>Wordle</title>
 </head>
 
 <body>
     <header class="header">
-        Wordle
+        <ul class="navbar">
+            <span class="save-game">Guardar partida</span>
+            <span class="line"></span>
+        </ul>
     </header>
     <div class="main-container">
         <div class="tiles-container">
@@ -86,7 +89,7 @@
                 <button class="key">Ñ</button>
             </div>
             <div class="keys-row">
-                <button class="key">ENTER</button>
+                <button class="key point-five">ENTER</button>
                 <button class="key">Z</button>
                 <button class="key">X</button>
                 <button class="key">C</button>
@@ -94,7 +97,7 @@
                 <button class="key">B</button>
                 <button class="key">N</button>
                 <button class="key">M</button>
-                <button class="key">DELETE</button>
+                <button class="key point-five">DELETE</button>
             </div>
         </div>
     </div>
