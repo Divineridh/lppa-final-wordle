@@ -81,15 +81,52 @@ body {
 .modal-container {
 	margin:auto;
     width: 90%;
-    max-width: 600px;
+    max-width: 500px;
     max-height: 90%;
-    background-color: #ffffff;
+    background-color: #2e2e2e;
     border-radius: 10px;
     padding: 48px 40px;
     display:flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+}
+
+#game-name {
+	margin-top: 30px;
+	height: 25px;
+	width: 200px;
+	font-size: 15px;
+	border-radius: 4px;
+}
+
+.modal-buttons {
+	width: 300px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 30px;
+}
+
+.modal-button {
+	background-color: #213b55;
+	border: 1px solid #a0a0a0;
+	border-radius: 4px;
+	height: 30px;
+	width: 100px;
+	display: block;
+	text-align: center;
+	line-height: 1.9;
+	user-select: none;
+}
+
+.modal-button:hover {
+	background-color: #224669;
+}
+
+.modal-button:active {
+	background-color: #15293d;
 }
 
 .form-group {

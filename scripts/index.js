@@ -4,6 +4,9 @@ window.onload = function() {
         e.preventDefault();
         showNewGameScreen();
     }
+    startGameButton.onclick = (e) => {
+        newGame();
+    }
 }
 
 function loadItems() {
@@ -20,10 +23,17 @@ function showNewGameScreen() {
     newGameModal.classList.add("modal-show");
     cancelGameButton.onclick = () => {
         newgameModal.classList.remove("modal-show");
+        gameName.value = "";
     }
     window.onclick = function(e) {
         if (e.target == newGameModal) {
             newGameModal.classList.remove("modal-show");
+            gameName.value = "";
         }
     }
+}
+
+function newGame() {
+    sessionStorage.setItem("newGameName", gameName.value);
+    location = "./wordle.html";
 }
