@@ -5,7 +5,7 @@ body {
 	background-image: linear-gradient(to bottom, #00000099, transparent);
 	color: #eeeeee;
 	font-family: 'Lato', sans-serif;
-	padding: 0 20px;
+	/* padding: 0 20px; */
 	box-sizing: border-box;
 }
 
@@ -18,13 +18,13 @@ body {
 	font-weight: 300;
     display: flex;
 	grid-template-columns: repeat(var(--items), 1fr);
-	position: fixed;
+	/* position: fixed; */
     width: 100%;
     justify-content: space-evenly;
     user-select: none;
 }
 
-.navbar > .save-game {
+.navbar > .navbar-button {
 	color: #a6bace;
 	padding: .75em;
 	text-align: center;
@@ -32,7 +32,7 @@ body {
 	transition: all .5s;
 }
 
-.save-game:hover {
+.navbar-button:hover {
     background: #ffffff0c;
 	color: #aaddff;
 }
@@ -50,7 +50,7 @@ body {
 
 .main-container {
     width: 100%;
-    max-width: 500px;
+    max-width: 510px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -60,6 +60,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
+    max-width: 500px;
     height: 440px;
     justify-content: center;
     align-items: center;
@@ -84,10 +85,12 @@ body {
 .virtual-keyboard {
     height: 200px;
     width: 484px;
-    margin: 0 8px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     user-select: none;
+    justify-content: center;
+    align-items: center;
 }
 
 .keys-row {
