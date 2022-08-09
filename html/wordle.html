@@ -1,108 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../styles/reset.css">
+        <link rel="stylesheet" href="../styles/wordle.css">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/reset.css">
-    <link rel="stylesheet" href="../styles/wordle.css">
-    <script src="../scripts/wordle.js" type="module" defer></script>
-    <title>Wordle</title>
-</head>
+        <script src="../scripts/wordle.js"></script>
+        <title>Wordle</title>
+    </head>
+    <body>
+        <header>
+            <h1>Final LPPA</h1>
+            <nav class="navbar">
+                <a class="btnNav">Inicio</a>
+                <a class="btnNav">Ganadores</a>
+                <a class="btnNav">Contacto</a>
+                <a class="btnNav">Código</a>
+            </nav>
+        </header>
+        
+        <p class="nombre-cronometro"></p>
+        <p class="nombre-cronometro">Iniciando cronómetro...</p>
+        <form class="main-container">
+            <fieldset id="row0" class="row">
+                <input maxlength="1" id="f0c0" class="tile">
+                <input maxlength="1" id="f0c1" class="tile">
+                <input maxlength="1" id="f0c2" class="tile">
+                <input maxlength="1" id="f0c3" class="tile">
+                <input maxlength="1" id="f0c4" class="tile">
+            </fieldset>
+            <fieldset id="row1" class="row">
+                <input maxlength="1" id="f1c0" class="tile">
+                <input maxlength="1" id="f1c1" class="tile">
+                <input maxlength="1" id="f1c2" class="tile">
+                <input maxlength="1" id="f1c3" class="tile">
+                <input maxlength="1" id="f1c4" class="tile">
+            </fieldset>
+            <fieldset id="row2" class="row">
+                <input maxlength="1" id="f2c0" class="tile">
+                <input maxlength="1" id="f2c1" class="tile">
+                <input maxlength="1" id="f2c2" class="tile">
+                <input maxlength="1" id="f2c3" class="tile">
+                <input maxlength="1" id="f2c4" class="tile">
+            </fieldset>
+            <fieldset id="row3" class="row">
+                <input maxlength="1" id="f3c0" class="tile">
+                <input maxlength="1" id="f3c1" class="tile">
+                <input maxlength="1" id="f3c2" class="tile">
+                <input maxlength="1" id="f3c3" class="tile">
+                <input maxlength="1" id="f3c4" class="tile">
+            </fieldset>
+            <fieldset id="row4" class="row">
+                <input maxlength="1" id="f4c0" class="tile">
+                <input maxlength="1" id="f4c1" class="tile">
+                <input maxlength="1" id="f4c2" class="tile">
+                <input maxlength="1" id="f4c3" class="tile">
+                <input maxlength="1" id="f4c4" class="tile">
+            </fieldset>
+            <fieldset id="row5" class="row">
+                <input maxlength="1" id="f5c0" class="tile">
+                <input maxlength="1" id="f5c1" class="tile">
+                <input maxlength="1" id="f5c2" class="tile">
+                <input maxlength="1" id="f5c3" class="tile">
+                <input maxlength="1" id="f5c4" class="tile">
+            </fieldset>
+            <input type="button" class="btnGuardar" value="Guardar partida">
+        </form>
 
-<body>
-    <header class="header">
-        <ul class="navbar">
-            <span class="exit-game navbar-button">Salir</span>
-            <span class="save-game navbar-button">Guardar partida</span>
-            <span class="deployable-menu">Menu</span>
-            <span class="line"></span>
-        </ul>
-    </header>
-    <div class="main-container">
-        <div class="tiles-container">
-            <div class="row">
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
+        <section class="modal" id="sctModal">
+            <div class="modal-container">
+                <h2 class="modal-title"></h2>
+                <p class="modal-text"></p>
+                <span class="modal-btn">Cerrar</span>
             </div>
-            <div class="row">
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-            </div>
-            <div class="row">
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-            </div>
-            <div class="row">
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-            </div>
-            <div class="row">
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-            </div>
-            <div class="row">
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-            </div>
-        </div>
-        <div class="virtual-keyboard">
-            <div class="keys-row">
-                <button class="key">Q</button>
-                <button class="key">W</button>
-                <button class="key">E</button>
-                <button class="key">R</button>
-                <button class="key">T</button>
-                <button class="key">Y</button>
-                <button class="key">U</button>
-                <button class="key">I</button>
-                <button class="key">O</button>
-                <button class="key">P</button>
-            </div>
-            <div class="keys-row">
-                <button class="key">A</button>
-                <button class="key">S</button>
-                <button class="key">D</button>
-                <button class="key">F</button>
-                <button class="key">G</button>
-                <button class="key">H</button>
-                <button class="key">J</button>
-                <button class="key">K</button>
-                <button class="key">L</button>
-                <button class="key">Ñ</button>
-            </div>
-            <div class="keys-row">
-                <button class="key point-five">ENTER</button>
-                <button class="key">Z</button>
-                <button class="key">X</button>
-                <button class="key">C</button>
-                <button class="key">V</button>
-                <button class="key">B</button>
-                <button class="key">N</button>
-                <button class="key">M</button>
-                <button class="key point-five">DELETE</button>
-            </div>
-        </div>
-    </div>
-</body>
+        </section>
 
+        <footer>
+            <p>
+                Examen final LPPA. Ignacio Arron.
+            </p>
+        </footer>
+    </body>
 </html>

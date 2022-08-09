@@ -60,8 +60,8 @@ body {
 	width: 100%;
 }
 
-.modal {
-	position:fixed;
+.modal{
+    position:fixed;
     z-index: 1;
     top:0;
     left:0;
@@ -71,6 +71,7 @@ body {
     display:flex;
     opacity: 0;
     pointer-events: none;
+    user-select: none;
 }
 
 .modal-show {
@@ -78,10 +79,10 @@ body {
 	pointer-events: unset;
 }
 
-.modal-container {
-	margin:auto;
+.modal-container{
+    margin:auto;
     width: 90%;
-    max-width: 500px;
+    max-width: 600px;
     max-height: 90%;
     background-color: #2e2e2e;
     border-radius: 10px;
@@ -131,4 +132,65 @@ body {
 
 .form-group {
 	flex-direction: column;
+}
+
+.modal-title{
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.modal-text{
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.modal-btn{
+    color: #ffffff;
+    background-color: #000000;
+    padding: 16px 48px;
+    border: 1px solid;
+    border-radius: 6px;
+    display:inline-block;
+    font-weight: 300;
+    transition: background-color .3s;
+    margin: 8px;
+    cursor: pointer;
+}
+
+.modal-btn:hover{
+    background-color: #222020;
+}
+
+table{
+    text-align: left;
+    background-color: #213b55;
+    border-collapse: collapse;
+    width: 95%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+th,td{
+    padding: 10px;
+    border: solid 1px #000000;
+}
+
+thead{
+    font-weight: 700;
+    background-color: #284f75;
+    color:#ffffff;
+}
+
+tr:nth-child(even){
+    background-color: #213b55;
+}
+
+tr:hover td{
+    background-color: #2e4d6d;
+    color:#ffffff;
+    cursor:pointer;
 }

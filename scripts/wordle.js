@@ -104,7 +104,7 @@ function iniciarCronometro(m,s){
             s = 0;
             m++;
         }        
-        pCronometro.innerHTML = `Tu tiempo es ${m.toString().padStart(2,"0")}:${s.toString().padStart(2,"0")}`;
+        pCronometro.innerHTML = `Tu tiempo es: ${m.toString().padStart(2,"0")}:${s.toString().padStart(2,"0")}`;
         mins = m;
         secs = s;
         s++;
@@ -122,7 +122,7 @@ function iniciarCronometro(m,s){
   }
 
 function crearPartidaNueva(){
-  pNombre.innerHTML = `Hola ${sessionStorage.gameName}`;
+  pNombre.innerHTML = `Nombre de partida: ${sessionStorage.gameName}`;
   for (let i = 0; i < filas.length; i++) {
       if (i != 0) {
           filas[i].disabled = true;
@@ -178,7 +178,7 @@ function cargarPartidaGuardada(){
   pintarTablero();
   mins = partidaCargada.minutos;
   secs = partidaCargada.segundos;
-  pNombre.innerHTML = `Hola ${partidaCargada.jugador}`;
+  pNombre.innerHTML = `Nombre de partida: ${partidaCargada.jugador}`;
   iniciarCronometro(mins,secs);
   inicio();        
 }
@@ -231,23 +231,23 @@ function mostrarModal(resultado){
         case "win":
             modalTitle.innerHTML = "¡Ganaste!"
             modalTitle.style.color = "blue";
-            modalText.innerHTML = "Bien hecho la palabra era " + palabra.toUpperCase() + ", ahora figuras en la tabla de ganadores.";
+            modalText.innerHTML = "Ganaste!";
             modal.classList.add("modal-show");
             guardarPartidaGanada();
         break;
         case "lose":
             modalTitle.innerHTML = "¡Perdiste!"
             modalTitle.style.color = "red";
-            modalText.innerHTML = "La palabra era " + palabra.toUpperCase() + ". Vuelve a intentarlo en otra ocacion.";
+            modalText.innerHTML = "La palabra era: " + palabra.toUpperCase() + ".";
             modal.classList.add("modal-show");
         break;
         case "save":
             modalTitle.innerHTML = "¡Partida guardada!"
             modalTitle.style.color = "green";
             if (partidaCargada == null) {
-                modalText.innerHTML = sessionStorage.nombre + ", se guardo tu partica. Para retomarla tienes que ir al menu de inicio.";
+                modalText.innerHTML = "Se guardo la partida de nombre '" + sessionStorage.gameName + "'.";
             } else {
-                modalText.innerHTML = partidaCargada.jugador + ", se guardo tu partica. Para retomarla tienes que ir al menu de inicio.";
+                modalText.innerHTML = "Se guardo la partida de nombre '" + partidaCargada.jugador + "'.";
             }
             modal.classList.add("modal-show");
         break;
@@ -255,7 +255,7 @@ function mostrarModal(resultado){
             clearInterval(cronometro);
             modalTitle.innerHTML = "¡Error!"
             modalTitle.style.color = "red";
-            modalText.innerHTML = "No se puede guardar una partida que no esta empezada.";
+            modalText.innerHTML = "No hay ninguna partida en curso.";
             modal.classList.add("modal-show");
         break;
     }
@@ -338,7 +338,7 @@ function guardarPartida(){
   detenerJuego();
   let fechaActual = new Date();
   let partida = {
-      jugador: sessionStorage.nombre,
+      jugador: sessionStorage.gameName,
       palabra: palabra,
       tablero: respuestas,
       color: colorTablero,
@@ -362,7 +362,7 @@ function guardarPartida(){
 function guardarPartidaGanada(){
   let fechaActual = new Date();
   let ganada = {
-      jugador: sessionStorage.nombre,
+      jugador: sessionStorage.gameName,
       palabra: palabra,
       tablero: respuestas,
       color: colorTablero,

@@ -42,24 +42,38 @@
             </div>
         </div>
     </section>
-    <section class="modal">
-        <div class="modal-div modal-loadgame flex-container">
-
+    <section class="modal" id="loadGameModal">
+        <div class="modal-container">
+            <h2 class="modal-title hidden"></h2>
+            <p class="text hidden">Obteniendo datos...</p>
+            <table id="table">
+                <thead id="encabezado"></thead>
+                <tbody id="contenido"></tbody>
+            </table>
+            <span class="modal-btn">Cancelar</span>
         </div>
     </section>
-    <section class="modal">
+    <section class="modal" id="contactModal">
         <div class="modal-container modal-contact">
             <fieldset class="form-group flex-container">
-                <label class="form-label-text" for="textNombre">Nombre</label>
-                <input class="form-text" type="text" id="textNombre" placeholder=" ">
-                <label class="form-label-error hidden" for="textNombre">Debe ingresar un nombre</label>
-                <label class="form-label-text" for="textEmail">Email</label>
-                <input class="form-text" type="text" id="textEmail" placeholder=" ">
-                <label class="form-label-error hidden" for="textEmail">Email no valido</label>
-                <label class="form-label-text" for="textMensaje">Mensaje</label>
-                <input class="form-text" type="text" id="textMensaje" placeholder=" ">
-                <label class="form-label-error hidden" for="textMensaje">Debe ingresar un mensaje</label>
+                <label class="form-label-text" for="contactNombre">Nombre</label>
+                <input class="form-text" type="text" id="contactNombre" placeholder=" ">
+                <label class="form-label-error hidden" for="contactNombre">Debe ingresar un nombre</label>
             </fieldset>
+            <fieldset class="form-group flex-container">
+                <label class="form-label-text" for="contactEmail">Email</label>
+                <input class="form-text" type="text" id="contactEmail" placeholder=" ">
+                <label class="form-label-error hidden" for="contactEmail">Email no valido</label>
+            </fieldset>
+            <fieldset class="form-group flex-container">
+                <label class="form-label-text" for="contactMensaje">Mensaje</label>
+                <input class="form-text" type="text" id="contactMensaje" placeholder=" ">
+                <label class="form-label-error hidden" for="contactMensaje">Debe ingresar un mensaje</label>
+            </fieldset>
+            <div class="modal-buttons">
+                <span class="modal-button" id="cancel-contact">Cancelar</span>
+                <span class="modal-button" id="accept-contact"><a href="mailto:contact@gmail.com">Enviar</a></span>
+            </div>
         </div>
     </section>
     <footer>
