@@ -26,8 +26,8 @@ Ignacio Arron - ignacioarron251@gmail.com
 
 ## Reconocimientos
 
-* [README Template] (https://github.com/othneildrew/Best-README-Template)
-* [GitHub Pages] (https://pages.github.com/)
-* [Malven's Flexbox Cheatsheet] (https://flexbox.malven.co/)
+* [README Template](https://github.com/othneildrew/Best-README-Template)
+* [GitHub Pages](https://pages.github.com/)
+* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
